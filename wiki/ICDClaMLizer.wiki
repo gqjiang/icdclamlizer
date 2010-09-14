@@ -1,0 +1,32 @@
+== Introduction ==
+* '''ICD ClaMLizer''' is a Protege Tab plugin which provides an user interface for transforming the ICD11 alpha contents of iCAT databases into ClaML format. This ClaML rendering is in turn used by WHO for publishing ICD11 alpha draft.
+
+== Background ==
+* ICD11 alpha contents in iCAT
+** The WHO adopted Web-Protégé for the alpha phase of ICD-11 development and the tool is called '''iCAT''', which stands for the ICD-11 Collaborative Authoring Tool.
+** [http://groups.google.com/group/icat-users?hl=en The iCAT Users Group] provides an approach on accessing the iCAT content programmatically.
+* ClaML
+** [http://en.wikipedia.org/wiki/ClaML ClaML] is an acronym for '''Classification Markup Language'''. This is an XML specification meant for the exchange of classifications. The main purpose of this European Standard is to support the safe transfer of the majority of hierarchical healthcare classification systems between organizations and dissimilar software products.
+
+== Download and Installation ==
+* Download this zip file and unzip the contents to the <protege-install-dir>/plugins folder in your Protege installation.
+* Note: Tested on Protege 3.4.3 for Windows XP
+
+== Usage ==
+* '''Step 1''' - Get the SQL dumps of iCAT and  get the pprj files for the corresponding database tables
+** described at http://groups.google.com/group/icat-users/web/accessing-the-icat-content-programmatically?hl=en&_done=%2Fgroup%2Ficat-users%3Fhl%3Den%26&hl=en
+* '''Step 2''' - Enable the plugin
+** Download and install a Protege 3.4.3 which is available at http://protege.cim3.net/download/old-releases/3.4.3/installer/
+** Create a new OWL project or open an existing OWL project
+** Click Menu Project->Configure
+**  Enable the checkbox for the ICD ClaMLizer from the list
+* '''Step 3''' - Use the ClaMLizer interface
+** Specify the file path for the ICD Umbrella pprj file, e.g. <path>/icd_umbrella.pprj
+** Specify the file name and path for the claml xml output, e.g. <path>/icd_claml.xml
+** Specify a linearization type from a dropdown list (Note: in this release, the plugin can only generate a ClaML rendering for '''Morbidity''' type)
+** Click the button "Generate ClaML..." and wait patiently until the processing is completed. (Note: it may take approximately 2 hours for the transformation)
+
+== Screenshot ==
+
+== References ==
+* Jiang G, Peterson KJ, Johnson TM, Celik C, Jakob R, Chute CG. Representing the ClaML-based ICD10 in LexGrid terminology model. AMIA Annu Symp Proc. 2008 Nov 6:992. http://www.ncbi.nlm.nih.gov/pubmed/18998953

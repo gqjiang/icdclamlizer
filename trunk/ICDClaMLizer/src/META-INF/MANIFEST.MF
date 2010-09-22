@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+
+Name: edu.mayo.informatics.icd.claml.ICDClaMLTab.class
+Tab-Widget: True
+
